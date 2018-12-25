@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Variables 
+myname="Yuxuan"
+
+# Constants
+declare -r NUM1=5
+
+# Arithmetic
+num2=4
+
+num3=$((NUM1+num2))
+num4=$((NUM1-num2))
+num5=$((NUM1*num2))
+num6=$((NUM1/num2))
+
+echo "5 + 4 = $num3"
+echo "5 - 4 = $num4"
+echo "5 * 4 = $num5"
+echo "5 / 4 = $num6"
+
+
+echo $((5**2))
+echo $((5%4))
+
+rand=5
+let rand+=4
+echo "$rand"
+
+# print and then increment
+echo "rand++ = $((rand++))"
+# increment and then print
+echo "++rand = $((++rand))"
+# print and then decrement
+echo "rand-- = $((rand--))"
+# decrement and then print
+echo "--rand = $((--rand))"
+
+# floating point using python
+num7=1.2
+num8=3.4
+num9=$(python -c "print $num7+$num8")
+echo $num9
+
+# print using cat
+# the "END" is what you use to end your text that you want to print
+cat<< END
+This text
+prints on
+many lines
+END
+
